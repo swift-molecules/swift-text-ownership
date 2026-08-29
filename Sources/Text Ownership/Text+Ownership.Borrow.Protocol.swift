@@ -1,5 +1,5 @@
 public import Byte
-public import Ownership
+public import Ownership_Borrow
 public import Text
 
 /// Uses a read-only byte span as the Text domain's borrowed representation.

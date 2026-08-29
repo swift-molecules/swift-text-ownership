@@ -36,14 +36,17 @@ let package = Package(
             name: "Text Ownership",
             dependencies: [
                 .product(name: "Text", package: "swift-text"),
-                .product(name: "Ownership", package: "swift-ownership"),
+                .product(name: "Ownership Borrow", package: "swift-ownership"),
                 .product(name: "Byte", package: "swift-byte"),
             ]
         ),
         .testTarget(
             name: "Text Ownership Tests",
             dependencies: [
-                "Text Ownership"
+                "Text Ownership",
+                .product(name: "Text", package: "swift-text"),
+                .product(name: "Ownership Borrow", package: "swift-ownership"),
+                .product(name: "Byte", package: "swift-byte"),
             ]
         ),
     ],

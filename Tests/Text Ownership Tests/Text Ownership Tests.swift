@@ -1,5 +1,5 @@
 import Byte
-import Ownership
+import Ownership_Borrow
 import Testing
 import Text
 import Text_Ownership
@@ -18,8 +18,8 @@ struct Text_Ownership_Tests {
         let borrowed: Text.Borrowed = bytes.span
 
         #expect(borrowed.count == 2)
-        #expect(borrowed[0] == Byte(0x41))
-        #expect(borrowed[1] == Byte(0x42))
+        #expect(borrowed[0].underlying == 0x41)
+        #expect(borrowed[1].underlying == 0x42)
     }
 }
 
